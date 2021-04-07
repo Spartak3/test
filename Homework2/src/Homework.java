@@ -71,6 +71,28 @@ public class Homework {
             singleNum=singleNum^arrOfNum[i];
         }
         System.out.printf("Single element is %d",singleNum);
+        System.out.println();
+
+
+
+        //boblesort
+        int t=0;
+        int[] sortArray={10,9,8,7,6,5,4,3,2,1,0,-5};
+        for (int i = 0; i < sortArray.length; i++) {
+            for (int j = 0; j < sortArray.length-1; j++) {
+                if(sortArray[j]>=sortArray[j+1])
+                {
+                    t=sortArray[j+1];
+                    sortArray[j+1]=sortArray[j];
+                    sortArray[j]=t;
+                }
+            }
+        }
+
+        for (int i = 0; i < sortArray.length; i++) {
+
+            System.out.print(sortArray[i]+" ");
+        }
 
 
 
